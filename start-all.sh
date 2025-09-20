@@ -1,5 +1,5 @@
 cd .\hackteen-frontend-creator\
-npm install
+npm install --no-optional
 npm run dev &
 
 cd ..\backend\
