@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* Ajustes globais */
+:root {
+  --focus: 3px;
+}
+
+/* animação suave de tema */
+html {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+* {
+  @apply transition-colors duration-300;
+}
+
+/* focus visible */
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 var(--focus) rgba(0, 102, 204, 0.35);
+}
+
+/* footer fixo canto inferior esquerdo */
+.conectatea-footer-fixed {
+  position: fixed;
+  left: 1rem;
+  bottom: 0.75rem;
+  z-index: 40;
+  pointer-events: none;
+}
+
+/* footer right info */
+.conectatea-footer-info {
+  position: fixed;
+  right: 1rem;
+  bottom: 0.75rem;
+  z-index: 40;
+  pointer-events: none;
+}
+
+/* acessibilidade */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* snake responsivo */
+.snake-canvas {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  aspect-ratio: 1/1;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap;
+}
