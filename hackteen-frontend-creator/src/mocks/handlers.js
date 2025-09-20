@@ -1,7 +1,7 @@
 import { rest } from 'msw';
 
 const users = [
-  { id: 1, name: 'Krewer', email: 'av.krewer@gmail.com', password: '06072025' }
+  { id: 1, name: 'none', email: 'none', password: 'none' }
 ];
 
 let nextId = 2;
@@ -44,3 +44,4 @@ export const handlers = [
     return res(ctx.status(200), ctx.json(posts));
   })
 ];
+
